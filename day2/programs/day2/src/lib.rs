@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("3k8gchNnUHpBiPe4HMnBBFh5LeCNCGJxniA5DNFKmKgZ");
+declare_id!("EiWnSyzoKH7VaqRouMVpxUm8BMMwZxq55eFmM1HqsYFX");
 
 #[program]
 pub mod day2 {
@@ -14,6 +14,12 @@ pub mod day2 {
 
     pub fn array(ctx: Context<Initialize>, arr: Vec<u64>) -> Result<()> {
         msg!("Your array {:?}", arr);
+        Ok(())
+    }
+
+    pub fn subtract(ctx: Context<Initialize>, a: u64, b: u64) -> Result<()> {
+        let result: u64 = a - b;
+        msg!("Result of subtraction: {}", result);
         Ok(())
     }
 }
