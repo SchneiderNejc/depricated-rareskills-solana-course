@@ -23,5 +23,10 @@ describe("day2", () => {
     console.log("Your transaction signature", tx);
   });
 
-  it("Array test", async () => {
+  it("Substract underflow", async () => {
+    const tx = await program.methods
+      .subtract(new anchor.BN(0), new anchor.BN(1))
+      .rpc();
+    console.log("Your transaction signature", tx);
+  });
 });
