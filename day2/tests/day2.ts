@@ -18,8 +18,8 @@ describe("day2", () => {
 
   it("Array test", async () => {
     const tx = await program.methods
-    .array([new anchor.BN(777), new anchor.BN(888)])
-    .rpc();
+      .array([new anchor.BN(777), new anchor.BN(888)])
+      .rpc();
     console.log("Your transaction signature", tx);
   });
 
